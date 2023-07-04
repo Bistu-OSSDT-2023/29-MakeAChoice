@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>帮你做决定</title>
+        <style>
+            @font-face {
+                font-family: "Wawa";
+                font-style: normal;
+                font-weight: 400;
+                src: url(font.ttf);
+            }
+
+            #app {
+                transform: scale(0.4);
+                transform-origin: 0 0;
+                position: fixed;
+                top: 0;
+                left: 0;
+                font-family: "Wawa";
+            }
+
+            body {
+                background-color: #f7cec8;
+                user-select: none;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .bg {
+                position: fixed;
+                z-index: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <img src="bj.png" class="bg" />
+            <div
+                style="
+                    text-align: center;
+                    padding-top: 900px;
+                    margin-left: 300px;
+                    font-size: 80px;
+                    width: 500px;
+                    color: #d07255;
+                "
+            >
+                做点什么呢？
+            </div>
+            <a href="WatchWhatAnimate\WatchWhatAnimate.html" 
+            style="
+            font-size: 70px;
+            color: #ba883c;
+            margin-left: 380px;
+            margin-top: 100px;
+            text-decoration: none;
+            "
+            >看什么番？</a>
+
+            <br>
+
+            <a href="read\readwhat.html" 
+            style="
+            font-size: 70px;
+            color: #d07255;
+            margin-left: 380px;
+            margin-top: 100px;
+            text-decoration: none;
+            "
+            >读什么书？</a>
+
+            <br>
+			 <a href="web--eat/web-song.html" 
+            style="
+            font-size: 70px;
+            color: #d07325;
+            margin-left: 380px;
+            margin-top: 100px;
+            text-decoration: none;
+            "
+            >吃什么呢？</a>
+
+            <br>
+
+            <a href="web--song\web-song.html" 
+            style="
+            font-size: 70px;
+            color: #772f19;
+            margin-left: 380px;
+            margin-top: 100px;
+            text-decoration: none;
+            "
+            >听什么歌?</a>
+
+            <br>
+
+            <a href="what play\play.html" 
+            style="
+            font-size: 70px;
+            color: #581b09;
+            margin-left: 380px;
+            top: 100px;
+            text-decoration: none;
+            "
+            >玩什么游戏？</a>
+        <div style="position:fixed; bottom: 10px; text-align: center;width: 100vw;color: #aaa;font-size: 12px;">LSWZ</div>
+    </body>
+    <script>
+        var i = 1;
+        var time = 0
+        window.onresize = () =>{
+            const scale = window.innerWidth / window.innerHeight;
+            if(scale > (9.0/16.0)){
+                document.getElementById("app").style.left = (window.innerWidth - 1080*(window.innerHeight/1920))/2+'px'
+                document.getElementById("app").style.transform = "scale("+(window.innerHeight/1920)+")";
+            }
+            else {
+                document.getElementById("app").style.left = 0
+                document.getElementById("app").style.transform = "scale("+(window.innerWidth/1080)+")";
+            }
+        }
+        window.onresize()
+
+    </script>
+</html>
